@@ -8,10 +8,10 @@
 
 ### -Type AUR helper
 ### yay or paru 
-aur_helper="yay"
+aur_helper="paru"
 ############ use : "Y" or "N"
 ###-Do you have any nvidia gpu in your system?
-nvidia="Y"
+nvidia="N"
 ###-Install GTK themes (required for Dark/Light function)?
 gtk_themes="Y"
 ###-Do you want to configure Bluetooth?
@@ -23,7 +23,7 @@ sddm="Y"
 ###-Install XDG-DESKTOP-PORTAL-HYPRLAND? (For proper Screen Share ie OBS)
 xdph="Y"
 ###-Install zsh, oh-my-zsh & (Optional) pokemon-colorscripts?
-zsh="Y"
+zsh="N"
 ###-Installing in a Asus ROG Laptops?
 rog="N"
 ###-Do you want to download pre-configured Hyprland dotfiles?

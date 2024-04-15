@@ -250,3 +250,4 @@ if [[ "$HYP" =~ ^[Yy]$ ]]; then
     fi    
 fi
 
+ln -s hyprland-configs/* ~/.config/
