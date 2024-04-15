@@ -3,7 +3,7 @@
 ## 需要安装的最小化插件
 
 ```bash
-pacman -S rofi waybar mako kitty
+pacman -S rofi waybar mako kitty grim slurp
 ```
 
 ## 💌 ** JaKooLit's Arch Hyprland Install Script ** 💌
