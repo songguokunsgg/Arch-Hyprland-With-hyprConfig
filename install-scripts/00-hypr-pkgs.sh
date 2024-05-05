@@ -17,6 +17,8 @@ curl
 grim 
 gvfs 
 gvfs-mtp
+hypridle
+hyprlock
 imagemagick 
 jq
 kitty
@@ -29,15 +31,15 @@ pipewire-alsa
 playerctl
 polkit-gnome
 python-requests
-python-pywal 
+python-pywal
+python-pyquery
+pyprland 
 qt5ct
 qt6ct
 qt6-svg
-rofi-lbonn-wayland-git 
+rofi-wayland
 slurp 
 swappy 
-swayidle 
-swaylock-effects-git
 swaync 
 swww 
 waybar
@@ -53,7 +55,7 @@ yad
 hypr_package_2=(
 brightnessctl 
 btop
-cava
+cava-git
 eog
 gnome-system-monitor
 mousepad 
@@ -64,16 +66,6 @@ nwg-look-bin
 pacman-contrib
 vim
 yt-dlp
-)
-
-fonts=(
-adobe-source-code-pro-fonts 
-noto-fonts-emoji
-otf-font-awesome 
-ttf-droid 
-ttf-fira-code
-ttf-jetbrains-mono 
-ttf-jetbrains-mono-nerd 
 )
 
 # List of packages to uninstall as it conflicts with swaync or causing swaync to not function properly
@@ -99,10 +91,10 @@ LOG="Install-Logs/install-$(date +%d-%H%M%S)_hypr-pkgs.log"
 # Installation of main components
 printf "\n%s - Installing hyprland packages.... \n" "${NOTE}"
 
-for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${fonts[@]}" "${Extra[@]}"; do
+for PKG1 in "${hypr_package[@]}" "${hypr_package_2[@]}" "${Extra[@]}"; do
   install_package "$PKG1" 2>&1 | tee -a "$LOG"
   if [ $? -ne 0 ]; then
-    echo -e "\e[1A\e[K${ERROR} - $PKG1 install had failed, please check the log"
+    echo -e "\e[1A\e[K${ERROR} - $PKG1 Package installation failed, Please check the installation logs"
     exit 1
   fi
 done
@@ -112,7 +104,7 @@ printf "\n%s - Checking if mako or dunst are installed and removing for swaync t
 for PKG in "${uninstall[@]}"; do
   uninstall_package "$PKG" 2>&1 | tee -a "$LOG"
   if [ $? -ne 0 ]; then
-    echo -e "\e[1A\e[K${ERROR} - $PKG uninstallation had failed, please check the log"
+    echo -e "\e[1A\e[K${ERROR} - $PKG uninstallation failed, please check the log"
     exit 1
   fi
 done

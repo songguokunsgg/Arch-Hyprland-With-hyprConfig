@@ -1,5 +1,29 @@
 ## Changelogs
 
+## 05 May 2024
+- switched to rofi-wayland Extra Repo
+
+## 04 May 2024
+- separated fonts installation script for easy debugging
+
+## 03 May 2024
+- added python3-pyquery for new weather-waybar python based on Hyprland-Dots
+
+## 02 May 2024
+- Added pyprland (hyprland plugin)
+
+## 26 Apr 2024
+- Updated sddm.sh for Qt6 variant
+
+## 23 Apr 2024
+- Dropping swayidle and swaylock in favor of hypridle and hyprlock
+
+## 20 Apr 2024
+- Change default Oh-my-zsh theme to xiong-chiamiov-plus
+
+## 16 Mar 2024
+- added hyprcursor
+
 ## 1 Mar 2024
 - replaced sddm-git with sddm
 
